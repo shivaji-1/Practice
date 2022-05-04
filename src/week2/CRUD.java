@@ -12,14 +12,10 @@ public class CRUD {
 
   public static void main(String[] args) {
 
-
     ArrayList<Book> books = new ArrayList<>();
-
-
     boolean loop = true;
 
     while (loop) {
-
       System.out.println(
           "1)ADD BOOK\n2)DELETE BOOK\n3)VIEW ALL BOOKS\n4)UPDATE BOOK\n5)EXIT");
 
@@ -54,12 +50,8 @@ public class CRUD {
 
           } catch (BookNotFoundException e) {
 
-
             e.printStackTrace();
           }
-
-
-
           break;
 
         case 3:
@@ -72,25 +64,15 @@ public class CRUD {
 
           System.out.println("enter title of book");
           title = sc.next();
-
           updateBook(books, title);
-
           break;
 
         case 5:
-
           loop = false;
           break;
 
-
-
       }
-
-
     }
-
-
-
   }
 
   public static int findIndex(ArrayList<Book> books, String title)
@@ -113,7 +95,6 @@ public class CRUD {
     if (books.size() > 0) {
 
       System.out.println("\n\n*******books are******\n\n");
-
       for (int i = 0; i < books.size(); i++) {
         System.out.println("books no " + i);
         System.out.println("book title is : " + books.get(i).getTitle());
@@ -128,7 +109,6 @@ public class CRUD {
     }
 
   }
-
 
   public static void updateBook(ArrayList<Book> books, String title) {
 
@@ -170,14 +150,11 @@ public class CRUD {
             books.get(i).setYear(year);
             break;
 
-
-
         }
 
         System.out.println("book updated");
 
         break;
-
 
       }
 
@@ -186,7 +163,6 @@ public class CRUD {
       }
 
     }
-
 
 
   }
@@ -198,7 +174,6 @@ public class CRUD {
 
     Book b = books.remove(index);
     System.out.println("removed " + b);
-
 
   }
 
@@ -219,11 +194,8 @@ public class CRUD {
     }
 
     books.add(b);
-
     return;
 
   }
-
-
 
 }
