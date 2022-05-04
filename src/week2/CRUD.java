@@ -29,15 +29,15 @@ public class CRUD {
 
         case 1:
           System.out.println("enter year of book");
-          System.out.println("enter type of book");
-          System.out.println("enter title of book");
-          System.out.println("enter authors of book");
-          System.out.println("enter publisher of book");
           int year = sc.nextInt();
-          String type = sc.nextLine();
-          String title = sc.nextLine();
-          String authors = sc.nextLine();
-          String publisher = sc.nextLine();
+          System.out.println("enter type of book");
+          String type = sc.next();
+          System.out.println("enter title of book");
+          String title = sc.next();
+          System.out.println("enter authors of book");
+          String authors = sc.next();
+          System.out.println("enter publisher of book");
+          String publisher = sc.next();
 
           addBook(books, type, title, authors, publisher, year);
 
@@ -46,7 +46,7 @@ public class CRUD {
         case 2:
 
           System.out.println("enter title of the book");
-          String name = sc.nextLine();
+          String name = sc.next();
           int index;
           try {
             index = findIndex(books, name);
@@ -97,7 +97,7 @@ public class CRUD {
       throws BookNotFoundException {
 
     for (int i = 0; i < books.size(); i++) {
-      if (books.get(i).getTitle().equals(title)) {
+      if (title.equals(books.get(i).getTitle())) {
         return i;
 
       }
