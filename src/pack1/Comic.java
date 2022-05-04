@@ -1,6 +1,6 @@
 package pack1;
 
-class Comic extends Book{
+public class Comic extends Book{
 	
 	String[] characters;
 	String description;
