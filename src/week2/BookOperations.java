@@ -6,7 +6,7 @@ import pack1.Book;
 import pack1.Comic;
 import pack1.History;
 
-public class CRUD {
+public class BookOperations {
 
   static Scanner sc = new Scanner(System.in);
 
